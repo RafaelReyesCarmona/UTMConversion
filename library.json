@@ -1,0 +1,28 @@
+{
+	"name": "UTMConversion",
+	"version": "1.0",
+	"keywords": "GPS, UTM",
+	"description": "Library to calc coordenates in UTM format(WGS84): Zone Band X Y (00A XXXXXX YYYYYYY), from grades (float format) getting from a NMEA GPS module.",
+	"authors":
+	[
+		{
+		"name": "Rafael Reyes Carmona",
+		"email": "rafael.reyes.carmona@gmail.com",
+		"url": "https://github.com/RafaelReyesCarmona/",
+		"maintainer": true
+		}
+	],
+	"repository":
+	{
+		"type": "git",
+		"url": "https://github.com/RafaelReyesCarmona/UTMConversion.git"
+	},
+	"frameworks": [
+	  "arduino"
+	],
+	"platforms": [
+	  "atmelavr",
+		"lgt8f",
+	  "teensy"
+	]
+}

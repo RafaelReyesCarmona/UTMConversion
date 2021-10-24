@@ -1,3 +1,5 @@
+<img src="img/location.png" width=48 height=48 align=right>
+
 # UTMConversion #
 
 [![GPS NMEA: UTMConversion](https://img.shields.io/badge/GPS_NMEA-UTMConversion-red?style=for-the-badge&logo=googlemaps)](README.md)
@@ -114,3 +116,25 @@ void loop() {
 
 }
 ```
+
+## License ##
+
+This file is part of UTMConversion.
+
+UTMConversion is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+UTMConversion is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with UTMConversion.  If not, see <https://www.gnu.org/licenses/>.
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+
+## Authors ##
+
+Copyright © 2019-2021 Francisco Rafael Reyes Carmona.
+Contact me: rafael.reyes.carmona@gmail.com
+
+## Credits ##
+
+Location icon at the beginning is from [Flaticon.es](https://www.flaticon.es) designed by [Good Ware](https://www.flaticon.com/authors/good-ware)
+and licensed by [free license](img/license.pdf).

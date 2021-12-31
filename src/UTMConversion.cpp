@@ -163,7 +163,7 @@ void GPS_UTM::UTM(double lati, double longi) {
     coordenadas en el eje X con el objeto de que no existan coordenadas negativas. */
 
     _y = round(n * v * (1 + z) + Bfi);
-	if (lati < 0.0) _y += 10000000;
+	if (lati < 0.0) _y += 10000000L;
 	/*!< En el caso de latitudes al sur del ecuador, se sumará al valor de Y 10.000.000
     para evitar coordenadas negativas. */
 	

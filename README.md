@@ -132,6 +132,8 @@ Coordenates -21.643806, 18.059813 -> UTM: 34K 195661 7603716
 Coordenates -37.463226, 146.629180 -> UTM: 55H 467207 5853673
 ```
 
+You can test theM with this page: (https://coordinates-converter.com/en)
+
 ## Changelog ##
 
 ### V1.1 ###

@@ -117,6 +117,21 @@ void loop() {
 }
 ```
 
+Those are some examples using the library:
+
+```
+Coordenates 37.895920, -4.747821 -> UTM: 30S 346323 4195707
+Coordenates 40.033222, -2.567744 -> UTM: 30T 536879 4431534
+Coordenates 40.774998, 15.582325 -> UTM: 33T 549141 4513943
+Coordenates 66.077492, -45.853359 -> UTM: 23W 461387 7328810
+Coordenates 33.406994, -84.482201 -> UTM: 16S 734146 3699241
+Coordenates -11.551785, -45.151016 -> UTM: 23L 483534 8723004
+Coordenates 7.333418, -69.030663 -> UTM: 19N 496616 810607
+Coordenates -41.266792, -67.625977 -> UTM: 19G 615092 5430716
+Coordenates -21.643806, 18.059813 -> UTM: 34K 195661 7603716
+Coordenates -37.463226, 146.629180 -> UTM: 55H 467207 5853673
+```
+
 ## Changelog ##
 
 ### V1.1 ###

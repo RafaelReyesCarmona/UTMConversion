@@ -1,6 +1,6 @@
 /*
 UTMConsersion_example.cpp - Example to use this library to convert in UTM coordenates.
-UTMConsersion v1.0
+UTMConsersion v1.1
 
 Copyright © 2019-2021 Francisco Rafael Reyes Carmona.
 All rights reserved.

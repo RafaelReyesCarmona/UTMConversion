@@ -1,6 +1,6 @@
 /*
 UTMConsersion.cpp - Library to convert in UTM coordenates.
-UTMConsersion v1.0.1
+UTMConsersion v1.1
 
 Copyright © 2019-2021 Francisco Rafael Reyes Carmona.
 All rights reserved.
@@ -67,22 +67,37 @@ void GPS_UTM::UTM(double lati, double longi) {
     //_h = (int)huso;
 	_h = (int)((longi + 180.0) / 6.0) + 1;
 
+	// Calculamos la parte entera de latitud y longitud para ralizar calculos más rápidos.
+	int lati_n = (int)lati;
+	int longi_n = (int)longi;
+
 	// Handle special case of west coast of Norway
-	if ( lati >= 56.0 && lati < 64.0 && longi >= 3.0 && longi < 12.0 ) {
+	if ( lati_n >= 56 && lati_n < 64 && longi_n >= 3 && longi_n < 12 ) {
 		_h = 32;
 	}
 
 	// Special zones for Svalbard
-	if ( lati >= 72.0 && lati < 84.0 ) {
-		if ( longi >= 0.0  && longi <  9.0 ) _h = 31;
-		else if ( longi >= 9.0  && longi < 21.0 ) _h = 33;
-		else if ( longi >= 21.0 && longi < 33.0 ) _h = 35;
-		else if ( longi >= 33.0 && longi < 42.0 ) _h = 37;
+	if ( lati_n >= 72 && lati_n < 84 ) {
+		if ( longi_n >= 0  && longi_n <  9 ) _h = 31;
+		else if ( longi_n >= 9  && longi_n < 21 ) _h = 33;
+		else if ( longi_n >= 21 && longi_n < 33 ) _h = 35;
+		else if ( longi_n >= 33 && longi_n < 42 ) _h = 37;
 	}
 
     int landa0 = _h * 6 - 183; ///< Cálculo del meridiano central del huso en grados.
-    double Dlanda = lonRad - (landa0 * PI_180);  ///< Desplazamiento del punto a calcular con respecto al meridiano central del huso.
+    double Dlanda = lonRad - ((double)landa0 * PI_180);  ///< Desplazamiento del punto a calcular con respecto al meridiano central del huso.
 
+	// Calculamos la zona.
+	const char L[] = {'C','D','E','F','G','H','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Z'};
+	lati_n += 80;
+	if ((lati_n >= 0) && (lati_n <= 151))
+		_letter = L[(lati_n >> 3)];
+	else if ((lati_n >= 152) && (lati_n <= 164))
+		_letter = L[19];
+	else
+	    _letter = L[20]; // This is here as an error flag to show that the latitude is outside the UTM limits
+
+	/*  Primera version de obtener la zona.
 	if ((84 >= lati) && (lati >= 72))
 		_letter = 'X';
 	else if ((72 > lati) && (lati >= 64))
@@ -125,7 +140,7 @@ void GPS_UTM::UTM(double lati, double longi) {
 		_letter = 'C';
 	else
 	    _letter = 'Z'; // This is here as an error flag to show that the latitude is outside the UTM limits
-
+	*/
 
 	/*!
     * Ecuaciones de Coticchia-Surace para el paso de Geográficas a UTM (Problema directo);

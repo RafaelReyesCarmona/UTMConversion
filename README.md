@@ -124,10 +124,10 @@ void loop() {
  * Change algoritm to calculate zone letter.
 ### V1.0.1 ###
 
-  * Fix a possible overflow with integers when calculate _y.
+ * Fix a possible overflow with integers when calculate _y.
 ### V1.0 ###
 
-Initial version release. Library for conversion GPS location info to UTM coordinates (WGS86). It has been implemented From library UTMconversion.h (TinyTrackGPS V0.7)
+ * Initial version release. Library for conversion GPS location info to UTM coordinates (WGS86). It has been implemented From library UTMconversion.h (TinyTrackGPS V0.7)
 
 ## License ##
 

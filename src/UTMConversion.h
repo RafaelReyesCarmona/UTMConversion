@@ -1,8 +1,8 @@
 /*
 UTMConsersion.h - Library to convert in UTM coordenates. Headers file.
-UTMConsersion v1.1
+UTMConsersion v1.2
 
-Copyright © 2019-2021 Francisco Rafael Reyes Carmona.
+Copyright © 2019-2022 Francisco Rafael Reyes Carmona.
 All rights reserved.
 
 rafael.reyes.carmona@gmail.com
@@ -48,6 +48,7 @@ class GPS_UTM {
 		};
 
 	void UTM(double, double);
+	void UTM(long,long);
 
 	int zone(){
 		return _h;

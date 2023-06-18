@@ -3,7 +3,7 @@
 # UTMConversion #
 
 [![GPS NMEA: UTMConversion](https://img.shields.io/badge/GPS_NMEA-UTMConversion-red?style=for-the-badge&logo=googlemaps)](README.md)
-[![Version: v1.1](https://img.shields.io/badge/Version-v1.1-blue?style=for-the-badge&logo=v)]()
+[![Version: v1.2](https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=v)]()
 
 Library for conversion GPS location info to UTM coordinates (WG86). It has been implemented From library UTMconversion.h (TinyTrackGPS V0.7)
 

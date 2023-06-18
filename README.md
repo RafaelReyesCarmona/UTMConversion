@@ -136,6 +136,9 @@ You can test theM with this page: (https://coordinates-converter.com/en)
 
 ## Changelog ##
 
+### V1.2 ###
+  * Added high precision using 'long' instead decimal for latitude and longitude.
+
 ### V1.1 ###
 
  * Change algoritm to calculate zone letter.

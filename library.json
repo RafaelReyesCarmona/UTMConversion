@@ -1,6 +1,6 @@
 {
 	"name": "UTMConversion",
-	"version": "1.1",
+	"version": "1.2",
 	"keywords": "GPS, UTM",
 	"description": "Library to calc coordenates in UTM format(WGS84): Zone Band X Y (00A XXXXXX YYYYYYY), from grades (float format) getting from a NMEA GPS module.",
 	"authors":

@@ -1,6 +1,6 @@
 /*
 UTMConsersion.cpp - Library to convert in UTM coordenates.
-UTMConsersion v1.2
+UTMConsersion v1.3
 
 Copyright © 2019-2022 Francisco Rafael Reyes Carmona.
 All rights reserved.
@@ -63,9 +63,10 @@ void GPS_UTM::UTM(double lati, double longi) {
     double lonRad = longi * PI_180; ///< Longitud en Radianes.
 
     /// Sobre el huso.
-    //float huso = ((longi + 180.0) / 6.0) + 1.0;  ///< Nos interesa quedarnos solo con la parte entera.
-    //_h = (int)huso;
-	_h = (int)((longi + 180.0) / 6.0) + 1;
+    float huso = ((longi + 180.0) / 6.0) + 1.0;  ///< Nos interesa quedarnos solo con la parte entera.
+    _h = (int)huso;
+	//_h = (int)((longi + 180.0) / 6.0) + 1; // Este calculo falla entre -1 y 0.
+
 
 	// Calculamos la parte entera de latitud y longitud para ralizar calculos más rápidos.
 	int lati_n = (int)lati;
@@ -221,7 +222,10 @@ void GPS_UTM::UTM(long lati_L, long longi_L) {
 	int longi_n = (int)(longi_L / 10000000L);
 
     /// Sobre el huso.
-	_h = (int)((longi_n + 180) / 6) + 1;
+	float huso = ((float)(longi_L + 1800000000L) / 6e7) + 1.0;  ///< Nos interesa quedarnos solo con la parte entera.
+    _h = (int)huso;
+
+	//_h = (int)((longi_n + 180) / 6) + 1; // Este calculo falla entre -1 y 0.
 
 	// Handle special case of west coast of Norway
 	if ( lati_n >= 56 && lati_n < 64 && longi_n >= 3 && longi_n < 12 ) {

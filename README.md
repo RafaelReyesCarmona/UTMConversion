@@ -3,7 +3,7 @@
 # UTMConversion #
 
 [![GPS NMEA: UTMConversion](https://img.shields.io/badge/GPS_NMEA-UTMConversion-red?style=for-the-badge&logo=googlemaps)](README.md)
-[![Version: v1.2](https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=v)]()
+[![Version: v1.3](https://img.shields.io/badge/Version-v1.3-blue?style=for-the-badge&logo=v)]()
 
 Library for conversion GPS location info to UTM coordinates (WG86). It has been implemented From library UTMconversion.h (TinyTrackGPS V0.7)
 
@@ -135,7 +135,8 @@ Coordenates -37.463226, 146.629180 -> UTM: 55H 467207 5853673
 You can test theM with this page: (https://coordinates-converter.com/en)
 
 ## Changelog ##
-
+### V1.3 ###
+  * Fix an error when latitude is between -1 and 0.
 ### V1.2 ###
   * Added high precision using 'long' instead decimal for latitude and longitude.
 

@@ -1,6 +1,6 @@
 /*
 UTMConsersion.h - Library to convert in UTM coordenates. Headers file.
-UTMConsersion v1.2
+UTMConsersion v1.3
 
 Copyright © 2019-2022 Francisco Rafael Reyes Carmona.
 All rights reserved.
